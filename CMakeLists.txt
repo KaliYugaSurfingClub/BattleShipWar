@@ -3,7 +3,7 @@ project(Battleship_War)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Battleship_War main.cpp
+add_executable(Battleship_War WIN32 main.cpp
         Core/Player.h
         UI.h
         utils.h

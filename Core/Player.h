@@ -14,7 +14,7 @@ enum class GridType : short {
 
 class Player {
 public:
-    Player(size_t size, GridType grid_type) : grid_(size, std::vector<PointState>(size)) {}
+    Player(size_t size, GridType grid_type) : grid_(size, std::vector<PointState>(size)), grid_type_(grid_type) {}
 
     void add_ship(Point a, Point b) {
 //        if (!is_correct_point(a)) {
@@ -42,6 +42,10 @@ public:
         }
 
         ships_.push_back(ship);
+    }
+
+    Point hit() {
+        return {};
     }
 
     HitResponse take_hit(Point point) {

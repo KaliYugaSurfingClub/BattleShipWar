@@ -1,9 +1,8 @@
 #include "Core/Game.h"
+#include "windows.h"
 
-int main() {
-    auto [player1, player2] = init_players();
-    Game g(player1, player2);
-    g.run();
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
+    MessageBox(NULL, "Hello", "HEllo 2", MB_OK);
 
     return 0;
 }
